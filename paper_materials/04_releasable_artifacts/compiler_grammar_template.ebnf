@@ -1,0 +1,14 @@
+sequence      = header, step_list ;
+header        = "DOCUMENT", ws, identifier, newline ;
+step_list     = { step } ;
+step          = "STEP", ws, integer, ":", ws, action, ws, "=>", ws, expectation, newline ;
+identifier    = letter, { letter | digit | "_" | "-" } ;
+action        = quoted_text ;
+expectation   = quoted_text ;
+quoted_text   = "\"", { character - "\"" }, "\"" ;
+integer       = digit, { digit } ;
+ws            = { " " | "\t" } ;
+newline       = "\n" ;
+letter        = "A"…"Z" | "a"…"z" ;
+digit         = "0"…"9" ;
+character     = ? any unicode character ? ;

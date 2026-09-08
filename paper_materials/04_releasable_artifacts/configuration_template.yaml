@@ -1,0 +1,12 @@
+model:
+  text_generator: "<model_name>"
+  image_classifier: "<model_name>"
+
+generation:
+  temperature: 0.0
+  max_steps: 200
+  seed: 12345
+
+pipeline:
+  mode: "air-gapped"
+  verification_required: true
