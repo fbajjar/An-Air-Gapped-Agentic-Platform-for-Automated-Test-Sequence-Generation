@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SyntheticTestSequence",
+  "type": "object",
+  "required": ["document_id", "steps"],
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "action", "expected_result"],
+        "properties": {
+          "index": { "type": "integer", "minimum": 1 },
+          "action": { "type": "string" },
+          "expected_result": { "type": "string" }
+        }
+      }
+    }
+  }
+}
