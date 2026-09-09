@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "status": "skipped",
+  "reason": "disabled",
+  "auto_repair_attempts": 1,
+  "strict": false
+}
