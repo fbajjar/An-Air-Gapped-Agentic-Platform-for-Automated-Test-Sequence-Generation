@@ -1,13 +1,8 @@
-Remaining settings: 
-flash attention enabled; 
-KV-cache quantisation disabled; 
-one concurrent slot; 
-temperature~0.0 (greedy), 
-topp~1.0, 
-seed~42, 
-removing sampling variation (residual engine non-determinism remains a limitation---whether from non-associative floating-point accumulation in the 
-Vulkan backend's parallel kernels or batch-dependent KV-cache and kernel dispatch was not isolated; 
-Section~\ref{sec:threats}); and generation limits 16\,384 (text), 1\,024 (vision), 128 (image classifier). 
-Values apply to the text stage unless noted; the vision stage receives neither top-$p$ nor seed.
+These are the settings for the llama.cpp engine:
 
-The Qwen3.5 developers do not recommend...
+flash attention enabled: Improves performance 
+KV-cache quantisation disabled: KV-cache quantization has been proven to degrade model performance through several studies.
+One concurrent slot: Since this is served to only one user. 
+temperature: 0.0 (greedy)
+topp: 1.0, 
+seed: 42, 
